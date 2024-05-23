@@ -1,0 +1,92 @@
+<div class="container-login">
+  <div class="container-login-central">
+    <div class="container-header">
+      <div class="titulo-login">create wallet</div>
+    </div>
+
+    <div class="container-form">
+      <form [formGroup]="form" class="form-inputs">
+        <div class="group-input">
+          <div class="text-info"></div>
+          <input
+            class="input-form"
+            type="text"
+            name="nome"
+            id="nome"
+            placeholder="nome"
+            formControlName="fullName"
+            required=""
+          />
+        </div>
+
+        <div class="group-input">
+          <div class="text-info"></div>
+          <input
+            class="input-form"
+            type="text"
+            name="cpfCnpj"
+            id="cpfCnpj"
+            placeholder="cpf or cnpj"
+            formControlName="cpfCnpj"
+            required=""
+          />
+        </div>
+
+        <div class="group-input">
+          <div class="text-info"></div>
+          <input
+            class="input-form"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email"
+            formControlName="email"
+            required=""
+          />
+        </div>
+
+        <div class="group-input">
+          <div class="text-info"></div>
+          <input
+            class="input-form"
+            type="password"
+            name="senha"
+            id="senha"
+            placeholder="senha"
+            formControlName="password"
+            required=""
+          />
+        </div>
+
+        <div class="group-input">
+          <div class="text-info"></div>
+          <input
+            class="input-form"
+            type="text"
+            name="walletType"
+            id="walletType"
+            placeholder="wallet type"
+            formControlName="walletType"
+            required=""
+          />
+        </div>
+
+        <div class="group-input">
+          <input
+            class="btn-login"
+            value="Save"
+            (click)="createWallet()"
+            routerLinkActive="router-link-active"
+          />
+
+          <input
+            class="btn-login-2"
+            value="Cancel"
+            [routerLink]="['/dashboard']"
+            routerLinkActive="router-link-active"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

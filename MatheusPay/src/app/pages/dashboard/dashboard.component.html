@@ -1,0 +1,103 @@
+<navbar></navbar>
+<sidebar></sidebar>
+<!-- <div *ngIf="findAllWalletsSubject$ | async as wallets">
+  <div *ngFor="let wallet of wallets">
+    
+  </div>
+</div> -->
+<div class="container-base" *ngIf="wallet">
+  <div class="content-page" >
+    <div class="container-cards">
+      <div class="card" >
+        <div class="title" >
+          <div class="card-icon blue"></div>
+
+          <div class="card-category">{{ wallet.fullName }}</div>
+
+          <h3 class="card-title">
+            R$
+            <span id="Investimento"> {{ wallet.balance }} </span>
+          </h3>
+          <div class="card-footer">
+            <div class="arrow"></div>
+            <div class="text-info">{{ wallet.email }}</div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="card">
+        <div class="title">
+          <div class="card-icon green"></div>
+
+          <div class="card-category">Despesas Pagas</div>
+
+          <h3 class="card-title">
+            R$
+            <span id="Investimento"> 0 </span>
+          </h3>
+        </div>
+
+        <div class="card-footer">
+          <div class="arrow"></div>
+          <div class="text-info">Acessar mes</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="title">
+          <div class="card-icon orange"></div>
+
+          <div class="card-category">Despesas a Pagar</div>
+
+          <h3 class="card-title">
+            R$
+            <span id="Investimento"> 0 </span>
+          </h3>
+        </div>
+
+        <div class="card-footer">
+          <div class="arrow"></div>
+          <div class="text-info">Acessar mes</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-cards">
+      <div class="card">
+        <div class="title">
+          <div class="card-icon red"></div>
+
+          <div class="card-category">Despesas atrasadas</div>
+
+          <h3 class="card-title">
+            R$
+            <span id="Investimento"> 0 </span>
+          </h3>
+        </div>
+
+        <div class="card-footer">
+          <div class="arrow"></div>
+          <div class="text-info">Verificar Despesas atrasadas</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="title">
+          <div class="card-icon red"></div>
+
+          <div class="card-category">Executar copia das despesas</div>
+
+          <h3 class="card-title">
+            On
+            <span id="Investimento"> </span>
+          </h3>
+        </div>
+
+        <div class="card-footer">
+          <div class="arrow"></div>
+          <div class="text-info">Executar</div>
+        </div>
+      </div>
+    </div> -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<div class="container-login">
+  <div class="container-login-central">
+    <div class="container-header">
+      <div class="titulo-login">Seja Bem vindo (a)</div>
+    </div>
+
+    <div class="container-form">
+      <form [formGroup]="form" class="form-inputs">
+        <div class="group-input">
+          <div class="text-info"></div>
+          <input
+            class="input-form"
+            type="text"
+            name="nome"
+            id="nome"
+            placeholder="nome"
+            formControlName="nome"
+            required=""
+          />
+        </div>
+
+        <div class="group-input">
+          <div class="text-info"></div>
+          <input
+            class="input-form"
+            type="text"
+            name="login"
+            id="login"
+            placeholder="email"
+            formControlName="login"
+            required=""
+          />
+        </div>
+
+        <div class="group-input">
+          <div class="text-info"></div>
+          <input
+            class="input-form"
+            type="password"
+            name="senha"
+            id="senha"
+            placeholder="senha"
+            formControlName="senha"
+            required=""
+          />
+        </div>
+
+        <div class="group-input">
+          <div class="text-info"></div>
+          <input
+            class="input-form"
+            type="text"
+            name="senha"
+            id="role"
+            placeholder="role"
+            formControlName="role"
+            required=""
+          />
+        </div>
+
+        <div class="group-input">
+          <input
+            class="btn-login"
+            value="Register"
+            (click)="registerUser()"
+            routerLinkActive="router-link-active"
+          />
+
+          <input
+            class="btn-login-2"
+            value="Cancel"
+            [routerLink]="['/']"
+            routerLinkActive="router-link-active"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

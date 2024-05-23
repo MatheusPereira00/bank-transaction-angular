@@ -1,0 +1,53 @@
+<div class="container-login">
+  <div class="container-login-central">
+    <div class="container-header">
+      <div class="titulo-login">Seja Bem vindo (a)</div>
+    </div>
+
+    <div class="container-form">
+      <form class="form-inputs">
+        <div class="group-input">
+          <div class="text-info"></div>
+          <input
+            class="input-form"
+            type="text"
+            name="login"
+            id="login"
+            placeholder="email"
+            [(ngModel)]="login"
+            required=""
+          />
+        </div>
+
+        <div class="group-input">
+          <div class="text-info"></div>
+          <input
+            class="input-form"
+            type="password"
+            name="senha"
+            id="senha"
+            placeholder="senha"
+            [(ngModel)]="senha"
+            required=""
+          />
+        </div>
+
+        <div class="group-input">
+          <input
+            class="btn-login"
+            value="Login"
+            (click)="loginUser()"
+            routerLinkActive="router-link-active"
+          />
+
+          <input
+            class="btn-login-2"
+            value="Register"
+            [routerLink]="['/register']"
+            routerLinkActive="router-link-active"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
