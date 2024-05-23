@@ -23,7 +23,7 @@ const routes: Routes = [
     canActivate: [loginGuard]
   },
   {
-    path: 'wallet', component: WalletComponent,
+    path: 'wallet*', component: WalletComponent,
     canActivate: [loginGuard]
   },
 ];

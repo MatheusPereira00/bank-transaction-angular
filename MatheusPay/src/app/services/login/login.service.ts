@@ -20,8 +20,8 @@ export class LoginService {
     responseType: 'text' as 'json',
   };
 
-  public login(login: string, senha: string): Observable<TokenResponse> {
-    const body = { login, senha };
+  public login(id: number, login: string, senha: string): Observable<TokenResponse> {
+    const body = { id, login, senha };
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.http.post<TokenResponse>(`${environment.apiSecurity}`, body, { headers })
       .pipe(

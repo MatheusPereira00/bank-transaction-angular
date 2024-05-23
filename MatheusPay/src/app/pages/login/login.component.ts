@@ -12,16 +12,17 @@ export class LoginComponent {
   public router = inject(Router);
   public isLoggingIn = false;
 
-  public id: any = 5;
+  public id: any = "";
   public login: any = "";
   public senha: any = "";
 
   public loginUser() {
     this.isLoggingIn = true;
-    this.loginService.login(this.login, this.senha).subscribe(data => {
+    this.loginService.login(this.id, this.login, this.senha).subscribe(data => {
       data;
       if (this.isLoggingIn == true) {
         this.router.navigate(['dashboard', this.id])
+        console.log(data);
       } else {
         console.log('error login')
       }

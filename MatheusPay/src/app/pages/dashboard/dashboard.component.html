@@ -6,10 +6,10 @@
   </div>
 </div> -->
 <div class="container-base" *ngIf="wallet">
-  <div class="content-page" >
+  <div class="content-page">
     <div class="container-cards">
-      <div class="card" >
-        <div class="title" >
+      <div class="card">
+        <div class="title">
           <div class="card-icon blue"></div>
 
           <div class="card-category">{{ wallet.fullName }}</div>
@@ -98,6 +98,65 @@
         </div>
       </div>
     </div> -->
+    </div>
+
+    <div>
+      <div class="content-page">
+        <div class="card-footer">
+          <div class="arrow"></div>
+          <div class="text-info">
+            <form class="form-inputs">
+              <div class="group-input">
+                <div class="text-info"></div>
+                <input
+                  class="input-form"
+                  type="text"
+                  name="value"
+                  id="value"
+                  placeholder="R$ 1234.00"
+                  [(ngModel)]="value"
+                  required=""
+                />
+              </div>
+              <div class="group-input">
+                <div class="text-info"></div>
+                <input
+                  class="input-form"
+                  type=""
+                  name="payer"
+                  id="payer"
+                  placeholder="{{ wallet.fullName }}"
+                  [(ngModel)]="payer"
+                  required=""
+                  disabled
+                />
+              </div>
+
+              <div class="group-input">
+                <div class="text-info"></div>
+                <input
+                  class="input-form"
+                  type=""
+                  name="payee"
+                  id="payee"
+                  placeholder="beneficiário"
+                  [(ngModel)]="payee"
+                  required=""
+                />
+              </div>
+
+              <div class="group-input">
+                <input
+                  class="btn-login"
+                  (click)="sendTransfer()"
+                  value="Enviar"
+                  routerLinkActive="router-link-active"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
